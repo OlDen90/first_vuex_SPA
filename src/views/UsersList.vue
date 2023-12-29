@@ -4,7 +4,7 @@
             <h1>Список пользователей</h1>
             <hr />
             <ul v-if="allUsers.length !== 0" class="list">
-                <li class="user-list" v-for="(user, idx) in     allUsers" :key="user.id"
+                <li class="user-list" v-for="(user, idx) in allUsers" :key="user.id"
                     :style="{ background: idx % 2 === 0 ? '#f3f3f3' : '#fff' }">
                     {{ idx + 1 }}. {{ user.name }}
 
@@ -32,7 +32,7 @@ export default {
     },
     methods: {
         navigateToUserPage(userId, contentType) {
-            this.$router.push({ name: 'user', params: { id: userId, contentType: contentType } });
+            this.$router.push({ name: 'user', params: { id: userId }, query: { contentType: contentType } });
         },
     },
 }

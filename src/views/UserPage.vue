@@ -39,8 +39,9 @@ import PostsList from "@/components/PostsList.vue";
 export default {
     props: ['id'],
     created() {
+        // mounted() {    
         const userId = this.$route.params.id;
-        const storedContentType = localStorage.getItem("content-type");
+        const storedContentType = this.$route.query.contentType;
         const contentType = storedContentType || "user";
 
         this.$store.dispatch('fetchUserById', userId);

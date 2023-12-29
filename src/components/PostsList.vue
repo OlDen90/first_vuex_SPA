@@ -48,10 +48,6 @@ export default {
         const userId = this.$route.params.id;
         await this.$store.dispatch('fetchPosts', userId);
     },
-    async beforeMount() {
-        const userId = this.$route.params.id;
-        await this.$store.dispatch('fetchPosts', userId);
-    }
 };
 </script>
 
