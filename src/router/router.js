@@ -26,7 +26,7 @@ const routes = [
 const router = new VueRouter({
   mode: 'history',
   routes,
-  base: '/first_vue_SPA/'
+  base: '/first_vuex_SPA/'
 })
 
 export default router
