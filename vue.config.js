@@ -50,7 +50,7 @@ module.exports = defineConfig({
     },
   },
   publicPath: process.env.NODE_ENV === 'production'
-    ? '/first_vue_SPA/'
+    ? '/first_vuex_SPA/'
     : '/',
 
   outputDir: 'dist'
